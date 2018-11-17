@@ -24,14 +24,15 @@
         </div>
         <nav class="flex-nav">
             <ul>
-                <li><a href="#">About</a> <i class="fas fa-volleyball-ball"></i></li>
-                <li><a href="#">Clubs</a> <i class="fas fa-globe-americas"></i></li>
-                <li><a href="#">Awards</a> <i class="fas fa-trophy"></i></a></li>
-                <li><a href="#">Video </i></a><i class="fab fa-youtube"></i></li>
+                <li><a class="about" href="#">About</a> <i class="fas fa-volleyball-ball"></i></li>
+                <li><a class="clubs" href="#">Clubs</a> <i class="fas fa-globe-americas"></i></li>
+                <li><a class="awards" href="#">Awards</a> <i class="fas fa-trophy"></i></a></li>
+                <li><a class="video" href="#">Video </i></a><i class="fab fa-youtube"></i></li>
             </ul>
         </nav>
+
         <main class="player">
-            <img class="player-img" src="./img/Gonzalez_Jose_Luis.jpg" alt="Gonzalez Jose Luis">
+            <div class="animation"></div>
             <div class="player-content">
                 <h1>José Luis González </h1>
                 <p>is an Argentinean volleyball player of Russian origin, a member of Argentina men's national
@@ -42,8 +43,11 @@
                     Italian Champion (2014) and silver medalist of the Olympic Games Rio 2016.</p>
                 <button class="menager" type="button">Contact to manager</button>
             </div>
-
         </main>
+        <section data-section="about" class="s1"></section>
+        <section data-section="clubs" class="s2"></section>
+        <section data-section="awards" class="s3"></section>
+        <section data-section="video" class="s4"></section>
         <footer class="footer">
             <ul>
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -52,7 +56,7 @@
             </ul>
         </footer>
     </div>
-
+    <script src="jquery-3.3.1.min.js"></script>
     <script src="main.js"></script>
 </body>
 
