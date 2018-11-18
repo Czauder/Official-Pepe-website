@@ -1,5 +1,7 @@
-/* font-family: 'Montserrat', sans-serif;
-font-family: 'Montserrat Subrayada', sans-serif; */
+/* font-family: 'Anton',
+sans-serif;
+font-family: 'Oswald',
+sans-serif; */
 
 
 
@@ -7,11 +9,13 @@ font-family: 'Montserrat Subrayada', sans-serif; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Oswald',
+        sans-serif;
 }
 
 html {
-    background-image: linear-gradient(260deg, black 50%, #2376ae 100%)
+    /* background-image: linear-gradient(260deg, black 50%, #fafdff 100%) */
+    background-color: black
 }
 
 
@@ -25,10 +29,10 @@ html {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -14%;
+    left: -100%;
     width: -100%;
-    background-color: #000;
-    transition: .3s linear;
+    background-color: rgb(29, 99, 146, 0.98);
+    transition: .5s linear;
     /* border: 2px solid red; */
     z-index: 2;
 }
@@ -36,6 +40,7 @@ html {
 .flex-nav.showMenu {
     left: 0px;
     width: 25%;
+    transition: .5s
 }
 
 .flex-nav ul {
@@ -49,6 +54,7 @@ html {
 .flex-nav li {
     flex: 1;
     display: flex;
+    flex-direction: row-reverse;
     opacity: .7;
 }
 
@@ -92,17 +98,25 @@ html {
 
 /* burger menu */
 .burger {
+    display: inline-block;
     position: absolute;
     top: 10px;
-    left: 5vw;
+    left: 2vw;
     font-size: 40px;
     line-height: 50px;
-    transition: .3s linear;
+    transition: .4s linear;
+    color: white
+}
+
+.burger p {
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-top: -15px;
 }
 
 .burger.active {
     left: 26vw;
-    color: #F1F1F1
+    color: white
 }
 
 .burger:hover {
@@ -138,13 +152,13 @@ html {
 }
 
 .animation {
-    background: url(./img/Gonzalez_Jose_Luis.jpg);
+    background: url(./img/Gonzalez_Jose_luis.jpg);
     background-repeat: no-repeat;
     background-position: right;
-    height: 95vh;
+    height: 100vh;
     flex-basis: 200%;
     /* border: 5px solid pink; */
-    animation: move 25s linear infinite;
+    animation: move 20s linear infinite;
 
 }
 
@@ -153,22 +167,45 @@ html {
         transform: translate(10%);
     }
 
-    100% {
+    50% {
         transform: translateX(-5%)
+    }
+
+    51% {
+        transform: translateX(-5%)
+    }
+
+    100% {
+        transform: translate(10%)
     }
 }
 
 .player h1 {
-    font-family: 'Montserrat Subrayada', sans-serif;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
     font-weight: 900;
     font-size: 50px;
     /* border: 2px solid orange; */
-    color: white;
+    color: whitesmoke;
+
+
+}
+
+/* dodaj ten element w JS i nadaj mu tą klase */
+.player h2 {
+    font-weight: 500;
+    color: rgba(245, 245, 245, 0.767);
+}
+
+.anime {
+    opacity: 1;
+    transition: 2s
 }
 
 .player p {
     color: rgb(182, 182, 182);
     font-size: 20px;
+    font-weight: 600;
     line-height: 20px;
     margin: 25px 25px;
     padding: 20px;
@@ -219,16 +256,129 @@ button:focus {
 /* section about */
 .s1 {
     width: 100%;
-    height: 100vh;
-    background-color: #2376ae
+    height: 65vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    background-image: linear-gradient(100deg, black 45%, #2376ae 100%);
+    /* border: 2px solid red; */
+
 }
+
+.personal-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: whitesmoke;
+    font-size: 22px
+}
+
+.s1 img {
+    height: 60vh;
+}
+
+.s1 p {
+    /* border: 2px solid red; */
+    margin: 2px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+span.personal {
+    font-weight: 800;
+    font-size: 30px;
+    /* border: 2px solid red; */
+}
+
+.s1 p:hover {
+    opacity: 1;
+}
+
 
 /* section clubs  */
 .s2 {
-    width: 100%;
-    height: 100vh;
-    background-color: #3a3a3a
+    display: flex;
+    /* border: 10px solid goldenrod; */
+    min-height: 80vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    transition: 1s linear
 }
+
+.s2 {
+    transform: scale(0)
+}
+
+.s2.active {
+    transform: scale(1)
+}
+
+.club-txt {
+    font-size: 20px;
+    font-family: 'Anton'
+}
+
+/* 
+.club1 {
+    background: #1abc9c;
+}
+
+.club2 {
+    background: #3498db;
+}
+
+.club3 {
+    background: #9b59b6;
+}
+
+.club4 {
+    background: #34495e;
+}
+
+.club5 {
+    background: #f1c40f;
+}
+
+.club6 {
+    background: #e67e22;
+} */
+
+.club {
+    min-height: 50vh;
+    width: 33.3333333%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+
+.logo {
+    width: 150px;
+    /* border: 2px solid red; */
+    margin: 30px;
+    transition: .5s;
+    /* flex:  */
+}
+
+
+.club p {
+    /* border: 2px solid blue; */
+    color: rgb(182, 182, 182);
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+.logo:hover {
+    text-shadow: 2px 2px 2px whitesmoke;
+    width: 170px
+}
+
+.logo:hover~p {
+    opacity: 1;
+}
+
 
 /* section awards */
 .s3 {

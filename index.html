@@ -8,44 +8,88 @@
     <title>Luis Gonzales</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada:400,700|Montserrat:400,600,800,900&amp;subset=latin-ext"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Anton|Oswald:400,500,600,700&amp;subset=latin-ext" rel="stylesheet">
 
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- wrapper -->
     <div class="wrapper">
-        <div class="burger">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-times"></i>
-        </div>
+        <header id="header">
+            <!-- nav -->
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+                <p>menu</p>
+            </div>
+        </header>
+        <!-- menu -->
         <nav class="flex-nav">
             <ul>
-                <li><a class="about" href="#">About</a> <i class="fas fa-volleyball-ball"></i></li>
-                <li><a class="clubs" href="#">Clubs</a> <i class="fas fa-globe-americas"></i></li>
-                <li><a class="awards" href="#">Awards</a> <i class="fas fa-trophy"></i></a></li>
-                <li><a class="video" href="#">Video </i></a><i class="fab fa-youtube"></i></li>
+                <li> <i class="fas fa-volleyball-ball"></i><a class="about" href="#">About</a></li>
+                <li> <i class="fas fa-globe-americas"></i><a class="clubs" href="#">Clubs</a> </li>
+                <li> <i class="fas fa-trophy"></i></a><a class="awards" href="#">Awards</a></li>
+                <li> <i class="fab fa-youtube"></i><a class="video" href="#">Video </i></a></li>
             </ul>
         </nav>
 
+        <!-- main -->
         <main class="player">
             <div class="animation"></div>
             <div class="player-content">
-                <h1>José Luis González </h1>
+                <div class="title">
+                    <h1>José González</h1>
+                </div>
                 <p>is an Argentinean volleyball player of Russian origin, a member of Argentina men's national
                     volleyball
                     team and Italian club Modena Volley, a bronze medalist of the Olympic Games London 2012, silver
                     medalist of the European Championship (2011, 2013), bronze medalist of the World League (2013,
                     2014),
                     Italian Champion (2014) and silver medalist of the Olympic Games Rio 2016.</p>
+
                 <button class="menager" type="button">Contact to manager</button>
             </div>
         </main>
-        <section data-section="about" class="s1"></section>
-        <section data-section="clubs" class="s2"></section>
+        <section data-section="about" class="s1">
+            <img src="./img/Luis_ball.jpg" alt="Luis keep ball">
+            <div class="personal-information">
+                <p> <span class="personal"> Full name</span> José Luis González</p>
+                <p> <span class="personal">Nationality</span> Argentinean</p>
+                <p> <span class="personal">Born</span> October 2, 1988 (age 30) Spolet, Argentina </p>
+                <p> <span class="personal">Height</span> 2.02 m (6 ft 8 in)</p>
+                <p> <span class="personal">Weight</span> 92 kg (203 lb)</p>
+                <p> <span class="personal">Spike</span> 360 cm (142 in)</p>
+                <p> <span class="personal">Block</span> 348 cm (137 in)</p>
+            </div>
+        </section>
+        <section data-section="clubs" class="s2">
+            <div class="club club1">
+                <img class="logo " src="./img/bbts-bielsko-biala.png" alt="volleyball club BBTS Bielsko-Biala">
+                <p> <span class="club-txt">BBTS Bielsko-Biała</span><br> 2018-2019</p>
+            </div>
+            <div class="club club2">
+                <img class="logo" src="./img/Panathinaikos-football-seal.png" alt="volleyball club Panathinaikos">
+                <p> <span class="club-txt">Panathinaikos VC</span><br> 2016-2018</p>
+            </div>
+            <div class="club club3">
+                <img class="logo" src="./img/OHK_Dynamo_logo.svg.png" alt="volleyball club Dynamo">
+                <p> <span class="club-txt">Dynamo VC</span><br> 2015-2016</p>
+            </div>
+            <div class="club club4">
+                <img class="logo" src="./img/logoret.png" alt="volleyball club Roma">
+                <p> <span class="club-txt">Roma Volley</span><br> 2011-2015</p>
+            </div>
+            <div class="club club5">
+                <img class="logo" src="./img/modena-volley.png" alt="volleyball club Modena">
+                <p> <span class="club-txt">Azimut Modena</span><br> 2008-2011</p>
+            </div>
+            <div class="club club6">
+                <img class="logo" src="./img/argentina.png" alt="volleyball national team Argentina">
+                <p> <span class="club-txt">Argentina National team</span><br> 2008- ..</p>
+            </div>
+        </section>
         <section data-section="awards" class="s3"></section>
         <section data-section="video" class="s4"></section>
         <footer class="footer">
