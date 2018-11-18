@@ -1,3 +1,5 @@
+const h2Achievements = []
+
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".flex-nav");
 const iconBurger = document.querySelector(".fa-bars");
@@ -9,7 +11,6 @@ const title = document.querySelector(".title")
 // h2 extra
 setTimeout(() => {
     const grow = 20
-
     const h2PlayerTitle = document.createElement('h2');
     h2PlayerTitle.textContent = 'Welcome to the Official Web Site ';
     title.appendChild(h2PlayerTitle);
@@ -18,7 +19,6 @@ setTimeout(() => {
 }, 3000);
 
 //  burger
-
 const menu = () => {
     burger.classList.toggle("active");
     nav.classList.toggle("showMenu");
