@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Anton|Oswald:400,500,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="dist/css/lightbox.min.css" rel="stylesheet">
 
 
     <link rel="stylesheet" href="style.css">
@@ -31,16 +32,18 @@
                 <li> <i class="fas fa-volleyball-ball"></i><a class="about" href="#">About</a></li>
                 <li> <i class="fas fa-globe-americas"></i><a class="clubs" href="#">Clubs</a> </li>
                 <li> <i class="fas fa-trophy"></i></a><a class="awards" href="#">Awards</a></li>
-                <li> <i class="fab fa-youtube"></i><a class="video" href="#">Video </i></a></li>
+                <li> <i class="fas fa-camera-retro"></i><a class="gallery" href="#">Gallery</i></a></li>
             </ul>
         </nav>
-
+        <!-- scroll button -->
+        <button onclick="topFunction()" id="scroll-button" title="Go to top"><i class="fas fa-arrow-up"></i></button>
         <!-- main -->
         <main class="player">
             <div class="animation"></div>
             <div class="player-content">
                 <div class="title">
                     <h1>José González</h1>
+                    <h2>Welcome to the Official Web Site </h2>
                 </div>
                 <p>is an Argentinean volleyball player of Russian origin, a member of Argentina men's national
                     volleyball
@@ -66,27 +69,27 @@
         <section data-section="clubs" class="s2">
             <div class="club club1">
                 <img class="logo " src="./img/bbts-bielsko-biala.png" alt="volleyball club BBTS Bielsko-Biala">
-                <p> <span class="club-txt">BBTS Bielsko-Biała</span><br> 2018-2019</p>
+                <p> <span class="club-txt">BBTS Bielsko-Biała</span><br> 2019-2018</p>
             </div>
             <div class="club club2">
                 <img class="logo" src="./img/Panathinaikos-football-seal.png" alt="volleyball club Panathinaikos">
-                <p> <span class="club-txt">Panathinaikos VC</span><br> 2016-2018</p>
+                <p> <span class="club-txt">Panathinaikos VC</span><br> 2018-2016</p>
             </div>
             <div class="club club3">
                 <img class="logo" src="./img/OHK_Dynamo_logo.svg.png" alt="volleyball club Dynamo">
-                <p> <span class="club-txt">Dynamo VC</span><br> 2015-2016</p>
+                <p> <span class="club-txt">Dynamo VC</span><br> 2016-2015</p>
             </div>
             <div class="club club4">
                 <img class="logo" src="./img/logoret.png" alt="volleyball club Roma">
-                <p> <span class="club-txt">Roma Volley</span><br> 2011-2015</p>
+                <p> <span class="club-txt">Roma Volley</span><br> 2015-2011</p>
             </div>
             <div class="club club5">
                 <img class="logo" src="./img/modena-volley.png" alt="volleyball club Montpellier">
-                <p> <span class="club-txt">Montpellier Volley</span><br> 2008-2011</p>
+                <p> <span class="club-txt">Montpellier Volley</span><br> 2011-2008</p>
             </div>
             <div class="club club6">
                 <img class="logo" src="./img/argentina.png" alt="volleyball national team Argentina">
-                <p> <span class="club-txt">Argentina National team</span><br> 2008- ..</p>
+                <p> <span class="club-txt">Argentina National team</span><br> since 2011</p>
             </div>
         </section>
         <section data-section="awards" class="s3">
@@ -121,7 +124,7 @@
                 <p>2017/2018 Gold medal with cup.svg Italian Championship, with Sir Safety Perugia</p>
             </div>
         </section>
-        <section class="contact">
+        <section data-section="menager" class="s4">
             <h1>Alev Poborski - manager</h1>
             <form class="menager-contact">
                 <input type="text" placeholder="Name">
@@ -131,9 +134,24 @@
                 </button>
             </form>
         </section>
-        <section data-section="video" class="s4">
-            <iframe width="50%" height="100%" src="https://www.youtube.com/embed/PyMYMcVAmSE" frameborder="0" allow="autoplay; encrypted-media"
-                allowfullscreen></iframe>
+        <section data-section="gallery" class="s5">
+            <div class="images">
+                <a data-lightbox="image-1" data-title="Volleyball BBTS Bielsko-Biała" href="img/1.jpg"><img src="img/thumb1.jpg"
+                        alt="miniatura"></a>
+                <a data-lightbox="image-1" data-title="Volleyball BBTS Bielsko-Biała" href="img/2.jpg"><img src="img/thumb2.jpg"
+                        alt="miniatura"></a>
+                <a data-lightbox="image-1" data-title="Volleyball BBTS Bielsko-Biała" href="img/3.jpg"><img src="img/thumb3.jpg"
+                        alt="miniatura"></a>
+                <a data-lightbox="image-1" data-title="perfect support!" href="img/4.jpg"><img src="img/thumb4.jpg" alt="miniatura"></a>
+                <a data-lightbox="image-1" data-title="Volleyball BBTS Bielsko-Biała" href="img/5.jpg"><img src="img/thumb5.jpg"
+                        alt="miniatura"></a>
+                <a data-lightbox="image-1" data-title="Volleyball BBTS Bielsko-Biała" href="img/6.jpg"><img src="img/thumb6.jpg"
+                        alt="miniatura"></a>
+                <a data-lightbox="image-1" data-title="Volleyball BBTS Bielsko-Biała" href="img/7.jpg"><img src="img/thumb7.jpg"
+                        alt="miniatura"></a>
+                <a data-lightbox="image-1" data-title="Volleyball BBTS Bielsko-Biała" href="img/8.jpg"><img src="img/thumb8.jpg"
+                        alt="miniatura"></a>
+            </div>
         </section>
         <footer class="footer">
             <ul>
@@ -145,6 +163,7 @@
     </div>
     <!-- Scripts -->
     <script src="jquery-3.3.1.min.js"></script>
+    <script src="dist/js/lightbox.min.js"></script>
     <script src="main.js"></script>
 </body>
 

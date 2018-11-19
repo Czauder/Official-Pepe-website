@@ -4,19 +4,21 @@ const burger = document.querySelector(".burger");
 const nav = document.querySelector(".flex-nav");
 const iconBurger = document.querySelector(".fa-bars");
 const iconX = document.querySelector(".fa-times");
-const h1PlayerTitle = document.querySelector(".player-content h1")
-const title = document.querySelector(".title")
+const h2PlayerTitle = document.querySelector(".player-content h2");
+const title = document.querySelector(".title");
+const scrollBtn = document.getElementById("scroll-button")
 
 
-// h2 extra
-setTimeout(() => {
-    const grow = 20
-    const h2PlayerTitle = document.createElement('h2');
-    h2PlayerTitle.textContent = 'Welcome to the Official Web Site ';
-    title.appendChild(h2PlayerTitle);
-    h2PlayerTitle.style.fontSize = `${grow}px`
 
-}, 3000);
+// h2 title
+animationTitle = () => {
+    h2PlayerTitle.classList.add('on')
+    console.log('działa')
+}
+
+setTimeout(animationTitle, 3000);
+
+
 
 //  burger
 const menu = () => {
@@ -28,15 +30,22 @@ const menu = () => {
 
 burger.addEventListener("click", menu);
 
-const closeMenu = () => {
-    console.log('działa')
-}
+// close menu on body
+// const closeMenu = (e) => {
+//     e.stopPropagation()
+//     if (nav.style.display === "block") {
+//         nav.style.display = "none";
 
-document.body.addEventListener('click', closeMenu)
+//         console.log('powinno się schować')
+//     } else {
+//         nav.style.display = "block";
+//         console.log('działa')
+//     }
+// }
+// document.body.addEventListener('click', closeMenu)
 
 
-
-// nav jQuery
+// nav - go to section 
 $('nav a').on('click', function () {
     const goToSection = "[data-section=" + $(this).attr('class') + "]";
     $('body, html').animate({
@@ -44,37 +53,52 @@ $('nav a').on('click', function () {
     })
 })
 
+// button menager - go to section 
+$('.menager').on('click', function () {
+    const goToSection = "[data-section=" + $(this).attr('class') + "]";
+    $('body, html').animate({
+        scrollTop: $(goToSection).offset().top
+    })
+})
 
 // scroll clubs 
-
 const showClub = () => {
 
     const windowHeight = $(window).height()
     const scrollValue = $(this).scrollTop();
-    // console.log(scrollValue);
+    console.log(scrollValue);
 
-    //Pierwsza sekcja
     const $s2 = $('.s2');
-    const s2FromTop = $s2.offset().top
-    const s2Height = $s2.outerHeight()
-
-
-    if (scrollValue > s2FromTop + s2Height - windowHeight) {
-        console.log("jestem art 2 wywietlony w całości");
-        $s2.addClass('active');
-    }
-    const $club = $('.s2');
+    const $club = $('.s1');
 
     const clubFromTop = $s2.offset().top;
 
-
     const clubHeight = $club.height();
 
-    if (scrollValue > clubFromTop + clubHeight / 2 - windowHeight) {
+    if (scrollValue > clubFromTop + (clubHeight / 2) - windowHeight) {
         $s2.addClass('active');
-        console.log('załączeni animacji op1');
+        console.log('załączenie animacji op1');
     }
-
 }
 
 $(document).on('scroll', showClub)
+
+
+
+// scroll button; 
+window.onscroll = function () {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}

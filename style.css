@@ -191,8 +191,17 @@ html {
 
 /* dodaj ten element w JS i nadaj mu tą klase */
 .player h2 {
+    font-size: 20px;
     font-weight: 500;
     color: rgba(245, 245, 245, 0.767);
+    opacity: 0.1;
+}
+
+.player h2.on {
+    font-weight: 500;
+    color: rgba(245, 245, 245, 0.767);
+    opacity: 1;
+    transition: 3s
 }
 
 
@@ -255,6 +264,7 @@ button:focus {
     display: flex;
     justify-content: space-around;
     background-image: linear-gradient(100deg, black 50%, #2376ae 100%);
+    /* background: linear-gradient(100deg, #000000 15%, #2376ae 48%, #000000 100%); */
     /* border: 2px solid red; */
 
 }
@@ -293,8 +303,8 @@ span.personal {
 /* section clubs  */
 .s2 {
     display: flex;
-    /* border: 10px solid goldenrod; */
-    min-height: 120vh;
+    /* border: 2px solid goldenrod; */
+    min-height: 100vh;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
@@ -314,8 +324,8 @@ span.personal {
     font-family: 'Anton'
 }
 
-/* 
-.club1 {
+
+/* .club1 {
     background: #1abc9c;
 }
 
@@ -340,7 +350,7 @@ span.personal {
 } */
 
 .club {
-    min-height: 50vh;
+    height: 45vh;
     width: 33.3333333%;
     display: flex;
     flex-direction: column;
@@ -354,7 +364,6 @@ span.personal {
     /* border: 2px solid red; */
     margin: 30px;
     transition: .5s;
-    /* flex:  */
 }
 
 
@@ -386,6 +395,7 @@ span.personal {
     height: 100vh;
     color: white;
     /* border: 2px solid red; */
+    margin-bottom: 50px;
 }
 
 .s3 h1 {
@@ -429,7 +439,7 @@ div.award {
 }
 
 /* contact Menager */
-.contact {
+.s4 {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -437,7 +447,7 @@ div.award {
     margin-bottom: 20px;
 }
 
-.contact h1 {
+.s4 h1 {
     font-family: 'Anton', sans-serif;
     justify-content: center;
     text-align: center;
@@ -447,7 +457,7 @@ div.award {
     color: whitesmoke;
     /* border: 2px solid orange; */
     text-transform: uppercase;
-    margin-bottom: 35px;
+    margin: 50px 35px;
 }
 
 input {
@@ -483,16 +493,36 @@ textarea {
     /* border: 2px solid green */
 }
 
-/* section video */
-.s4 {
-    width: 100%;
-    height: 50vh;
+/* section gallery */
+.s5 {
+    position: relative;
+    width: 80%;
+    height: 40vh;
+    margin: 100px auto;
     display: flex;
     justify-content: center;
     text-align: center;
-    background-image: linear-gradient(180deg, black 93%, #2376ae 100%);
+    margin-bottom: 160px;
 }
 
+.s5 .images {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    width: 80%;
+    height: 100%;
+    margin: 5px auto;
+    /* border: 2px solid orange */
+}
+
+.s5 img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10%;
+    box-shadow: 2px 2px 2px #2376ae2a
+}
 
 
 /* footer */
@@ -534,4 +564,17 @@ textarea {
 
 .footer i:hover {
     font-size: 18px
+}
+
+/* scroll button */
+.fa-arrow-up {
+    font-size: 40px;
+}
+
+#scroll-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
 }
