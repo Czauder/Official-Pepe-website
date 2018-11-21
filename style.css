@@ -14,7 +14,7 @@ sans-serif; */
 }
 
 html {
-  background-image: linear-gradient(20deg, #000000 20%, #1d1c74 38%, #000000 70%);
+  background-image: linear-gradient(20deg, #000000 20%, rgb(29, 28, 116) 38%, #000000 70%);
   /* background-color: rgb(63, 63, 62) */
 }
 
@@ -31,7 +31,7 @@ html {
   bottom: 0;
   left: -100%;
   width: -100%;
-  background-color: rgb(29, 99, 146, 0.98);
+  background-color: rgb(29, 28, 116, 0.98);
   transition: .5s linear;
   /* border: 2px solid red; */
   z-index: 2;
@@ -98,6 +98,7 @@ html {
 
 /* burger menu */
 .burger {
+  opacity: 1;
   display: inline-block;
   position: absolute;
   top: 10px;
@@ -255,6 +256,7 @@ button:focus {
   outline: none
 }
 
+
 /* section about */
 .animation-ball {
   background: url(./img/Luis_ball_przerobka.png);
@@ -315,7 +317,8 @@ span.personal {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  transition: 1s linear
+  transition: 1s linear;
+  background: linear-gradient(160deg, #000000 20%, #1d1c74 30%, #000000 80%);
 }
 
 .s2 {
@@ -402,7 +405,8 @@ span.personal {
   height: 100vh;
   color: white;
   /* border: 2px solid red; */
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  background: linear-gradient(20deg, #000000 20%, #1d1c74 38%, #000000 80%);
 }
 
 .s3 h1 {
@@ -452,7 +456,8 @@ div.award {
   width: 100%;
   height: 100vh;
   /* border: 2px solid red; */
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+  background: linear-gradient(160deg, #000000 20%, #1d1c74 38%, #000000 80%);
 }
 
 .s4 h1 {
@@ -509,13 +514,14 @@ textarea {
 /* section gallery */
 .s5 {
   position: relative;
-  width: 80%;
-  height: 80vh;
-  margin: 100px auto;
+  width: 100%;
+  height: 90vh;
+  padding: 100px auto;
   display: flex;
   justify-content: center;
   text-align: center;
   margin-bottom: 160px;
+  background: linear-gradient(20deg, #000000 20%, #1d1c74 38%, #000000 80%);
   /* border: 2px solid yellow; */
 }
 
