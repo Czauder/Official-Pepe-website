@@ -11,6 +11,7 @@ const form = document.querySelector('.menager-contact');
 const formName = document.querySelector('input[name="name"]');
 const formEmail = document.querySelector('input[name="email"]');
 const formArea = document.querySelector('textarea[name="message"]');
+const sectionPlayer = document.querySelector('.player');
 
 
 
@@ -25,28 +26,24 @@ setTimeout(animationTitle, 3000);
 
 
 //  burger
-const menu = () => {
-    burger.classList.toggle("active");
-    nav.classList.toggle("showMenu");
-    iconBurger.classList.toggle("active");
-    iconX.classList.toggle("active");
+const openMenu = () => {
+    burger.classList.add("active");
+    nav.classList.add("showMenu");
+    iconBurger.classList.add("active");
+    iconX.classList.add("active");
+    console.log('klikam w button')
 };
+burger.addEventListener("click", openMenu);
 
-burger.addEventListener("click", menu);
+const closeMenu = () => {
+    burger.classList.remove("active");
+    nav.classList.remove("showMenu");
+    iconBurger.classList.remove("active");
+    iconX.classList.remove("active");
+    console.log('klikam w body')
+}
 
-// close menu on body
-// const closeMenu = (e) => {
-//     e.stopPropagation()
-//     if (nav.style.display === "block") {
-//         nav.style.display = "none";
-
-//         console.log('powinno się schować')
-//     } else {
-//         nav.style.display = "block";
-//         console.log('działa')
-//     }
-// }
-// document.body.addEventListener('click', closeMenu)
+sectionPlayer.addEventListener('click', closeMenu)
 
 
 // nav - go to section 
@@ -132,5 +129,11 @@ const formValidator = (e) => {
         formArea.classList.remove("invalid");
     }
 
+    if (formErrors.length) {
+        // don't send 
+    } else {
+        form.submit()
+        // send email 
+    }
 }
 form.addEventListener('submit', formValidator);
