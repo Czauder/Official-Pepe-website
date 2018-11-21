@@ -1,19 +1,23 @@
 const h2Achievements = []
-
+const formErrors = []
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".flex-nav");
 const iconBurger = document.querySelector(".fa-bars");
 const iconX = document.querySelector(".fa-times");
 const h2PlayerTitle = document.querySelector(".player-content h2");
 const title = document.querySelector(".title");
-const scrollBtn = document.getElementById("scroll-button")
+const scrollBtn = document.getElementById("scroll-button");
+const form = document.querySelector('.menager-contact');
+const formName = document.querySelector('input[name="name"]');
+const formEmail = document.querySelector('input[name="email"]');
+const formArea = document.querySelector('textarea[name="message"]');
 
 
 
 // h2 title
 animationTitle = () => {
     h2PlayerTitle.classList.add('on')
-    console.log('działa')
+    // console.log('działa')
 }
 
 setTimeout(animationTitle, 3000);
@@ -61,12 +65,12 @@ $('.menager').on('click', function () {
     })
 })
 
-// scroll clubs 
+// show clubs 
 const showClub = () => {
 
     const windowHeight = $(window).height()
     const scrollValue = $(this).scrollTop();
-    console.log(scrollValue);
+    // console.log(scrollValue);
 
     const $s2 = $('.s2');
     const $club = $('.s1');
@@ -77,7 +81,7 @@ const showClub = () => {
 
     if (scrollValue > clubFromTop + (clubHeight / 2) - windowHeight) {
         $s2.addClass('active');
-        console.log('załączenie animacji op1');
+        // console.log('załączenie animacji op1');
     }
 }
 
@@ -85,7 +89,7 @@ $(document).on('scroll', showClub)
 
 
 
-// scroll button; 
+// scrollUp button; 
 window.onscroll = function () {
     scrollFunction()
 };
@@ -102,3 +106,31 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
+// form validaion
+const formValidator = (e) => {
+    e.preventDefault()
+    if (formName.value === "") {
+        formErrors.push("Write your name.");
+        formName.classList.add("invalid");
+    } else {
+        formName.classList.remove("invalid");
+    }
+
+    if (formEmail.value.indexOf('@') === -1) {
+        formErrors.push("This e-mail address is not valid.");
+        formEmail.classList.add("invalid");
+    } else {
+        formEmail.classList.remove("invalid");
+    }
+
+    if (formArea.value === "") {
+        formErrors.push("Add a message.");
+        formArea.classList.add("invalid");
+    } else {
+        formArea.classList.remove("invalid");
+    }
+
+}
+form.addEventListener('submit', formValidator);

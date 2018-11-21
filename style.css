@@ -14,8 +14,8 @@ sans-serif; */
 }
 
 html {
-  /* background-image: linear-gradient(260deg, black 50%, #fafdff 100%) */
-  background-color: black
+  background-image: linear-gradient(20deg, #000000 20%, #1d1c74 38%, #000000 70%);
+  /* background-color: rgb(63, 63, 62) */
 }
 
 
@@ -152,7 +152,7 @@ html {
 }
 
 .animation {
-  background: url(./img/Gonzalez_Jose_luis.jpg);
+  background: url(./img/Gonzalez_Jose_Luis_przeróbka.png);
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
@@ -257,7 +257,7 @@ button:focus {
 
 /* section about */
 .animation-ball {
-  background: url(./img/Luis_ball.jpg);
+  background: url(./img/Luis_ball_przerobka.png);
   background-repeat: no-repeat;
   background-size: 90%;
   background-position: center;
@@ -270,11 +270,11 @@ button:focus {
 .s1 {
   width: 100%;
   height: 65vh;
-  background-color: white;
+  /* background-color: white; */
   display: flex;
   justify-content: space-around;
-  background-image: linear-gradient(100deg, black 50%, #2376ae 99%);
-  /* background: linear-gradient(100deg, #000000 15%, #2376ae 48%, #000000 100%); */
+  /* background-image: linear-gradient(260deg, black 20%, #186ea7 40%, black 100%); */
+  background: linear-gradient(20deg, #000000 20%, #1d1c74 38%, #000000 80%);
   /* border: 2px solid red; */
 
 }
@@ -499,6 +499,11 @@ textarea {
   display: flex;
   flex-direction: column;
   /* border: 2px solid green */
+}
+
+/* form validation */
+.invalid {
+  border: 2px solid red
 }
 
 /* section gallery */
