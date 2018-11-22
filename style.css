@@ -14,8 +14,7 @@ sans-serif; */
 }
 
 html {
-  background-image: linear-gradient(20deg, #000000 20%, rgb(29, 28, 116) 38%, #000000 70%);
-  /* background-color: rgb(63, 63, 62) */
+  background-image: linear-gradient(200deg, #000000 18%, rgb(29, 28, 116) 40%, #000000 70%);
 }
 
 
@@ -31,7 +30,7 @@ html {
   bottom: 0;
   left: -100%;
   width: -100%;
-  background-color: rgb(29, 28, 116, 0.98);
+  background-color: #1d1c74;
   transition: .5s linear;
   /* border: 2px solid red; */
   z-index: 2;
@@ -90,10 +89,9 @@ html {
 
 .flex-nav ul li:hover {
   color: #000;
-  background: rgb(35, 118, 174, 0.3);
+  background: rgba(0, 0, 0, 0.44);
   opacity: 1;
   font-size: 35px;
-
 }
 
 /* burger menu */
@@ -180,6 +178,7 @@ html {
   }
 }
 
+
 .player h1 {
   font-family: 'Anton', sans-serif;
   letter-spacing: 2px;
@@ -201,8 +200,68 @@ html {
   font-weight: 500;
   color: rgba(245, 245, 245, 0.767);
   opacity: 1;
-  transition: 3s
+  transition: 3s;
+  text-shadow: 0 0 15px rgb(255, 255, 255), 0 0 5px rgb(36, 30, 114);
+  transition: opacity 0.5s;
+  animation: neon 10s infinite linear;
+  letter-spacing: 3px;
 }
+
+/* neon h2 */
+@keyframes neon {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.5;
+  }
+
+  30% {
+    opacity: 0.5
+  }
+
+  32% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  46% {
+    opacity: 0.5;
+  }
+
+  54% {
+    opacity: 0.5;
+  }
+
+  55% {
+    opacity: 1;
+  }
+
+  77% {
+    opacity: 1;
+  }
+
+  78% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: .5;
+  }
+}
+
 
 
 .player p {
