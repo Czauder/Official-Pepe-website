@@ -1,0 +1,293 @@
+@media (min-width: 1400px) and (max-height: 1024px) {
+
+    /* nav */
+    .flex-nav i {
+        font-size: 45px;
+    }
+
+    .flex-nav a {
+        font-size: 30px;
+    }
+
+    /* burger menu */
+    .burger {
+        font-size: 50px;
+    }
+
+    .burger p {
+        margin-top: -15px;
+    }
+
+    /* player section */
+    .player h1 {
+        font-size: 80px;
+    }
+
+    .player h2 {
+        font-size: 30px;
+    }
+
+    .player p {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    button {
+        font-size: 40px;
+    }
+
+
+    /* section about */
+    .animation-ball {
+        background-size: 100%;
+    }
+
+    .personal-information {
+        font-size: 30px
+    }
+
+    span.personal {
+        font-size: 40px;
+    }
+
+    /* section clubs  */
+    .club-txt {
+        font-size: 30px;
+        font-family: 'Anton'
+    }
+
+    .club p {
+        font-size: 20px;
+    }
+
+
+    /* section awards */
+    .s3 h1 {
+        font-size: 70px;
+
+    }
+
+    .s3 h2 {
+        font-size: 30px;
+    }
+
+    div.award {
+        font-size: 25px
+    }
+
+    .fa-trophy {
+        font-size: 35px
+    }
+
+    .fa-medal {
+        font-size: 35px
+    }
+
+    /* contact Menager */
+
+    .s4 h1 {
+        font-size: 50px;
+    }
+
+    input {
+        font-size: 20px;
+    }
+
+    textarea {
+        font-size: 20px;
+    }
+
+    /* section gallery */
+
+    .s5 img {
+        width: 300px;
+    }
+
+
+    /* footer */
+    .footer i {
+        font-size: 25px;
+    }
+
+    .footer i:hover {
+        font-size: 30px
+    }
+
+    /* scroll button */
+    .fa-arrow-up {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 1024px) and (max-height: 768px) {}
+
+@media (max-width: 812px) and (max-height: 375px) {}
+
+@media (max-width: 768px) and (max-height: 1024px) {}
+
+@media (max-width: 414px) and (max-height: 736px) {}
+
+@media (max-width: 375px) and (max-height: 812px) {}
+
+@media (min-width: 375px) and (max-height: 667px) {
+
+
+    .flex-nav.showMenu {
+        width: 80%;
+    }
+
+    /* burger menu */
+    .burger.active {
+        left: 85vw;
+        z-index: 99;
+    }
+
+    /* player section */
+    .player {
+        height: 137vh;
+        max-width: 100vw;
+        background-color: rgb(0, 0, 0, .9);
+        background-image: url(./img/Gonzalez_Jose_Luis_przeróbka.png);
+        background-repeat: no-repeat;
+    }
+
+    .player-content {
+        width: 100%;
+        height: 120vh;
+        background-color: rgb(0, 0, 0, .8);
+        /* background-image: url(./img/Gonzalez_Jose_Luis_przeróbka.png); */
+    }
+
+    .animation {
+        display: none;
+    }
+
+
+    .player h1 {
+        font-size: 40px;
+    }
+
+    .player h2 {
+        font-size: 18px;
+    }
+
+    .player p {
+        font-size: 20px;
+        margin: 25px 25px;
+    }
+
+    button {
+        margin: 10px auto;
+    }
+
+    /* section about */
+    .animation-ball {
+        display: none;
+    }
+
+    .s1 {
+        background-image: url(./img/Luis_ball_przerobka.png);
+    }
+
+    .personal-information {
+        color: whitesmoke;
+        width: 100%;
+        background-color: rgb(0, 0, 0, 0.5)
+    }
+
+    /* section clubs  */
+    .club {
+        width: 50%;
+    }
+
+    .logo {
+        width: 130px;
+    }
+
+
+    /* section awards */
+    .s3 {
+        margin-top: 50px;
+
+    }
+
+    .s3 h1 {
+        font-size: 30px;
+    }
+
+    .s3 h2 {
+        font-weight: 500;
+        font-size: 20px;
+        color: rgba(245, 245, 245, 0.767);
+        /* border: 2px solid pink; */
+    }
+
+    div.award {
+        margin-top: 30px;
+        left: 5%;
+        transform: translate(5%);
+        width: 90%;
+    }
+
+    /* contact Menager */
+    .s4 h1 {
+        font-size: 25px;
+        margin: 25px 0px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+    }
+
+    .menager-contact {
+        width: 80%;
+    }
+
+    /* section gallery */
+    .s5 {
+        height: 50vh;
+    }
+
+    .s5 .images {
+        width: 90%;
+        height: 70vh;
+    }
+
+    .s5 img {
+        width: 100px;
+    }
+
+
+    /* footer */
+    .footer li {
+        width: 100%;
+    }
+
+    .footer i {
+        color: white;
+        padding: 15px;
+        /* border: 2px solid firebrick; */
+        font-size: 15px;
+        transition: 0.2s linear
+    }
+
+
+    /* scroll button */
+    .fa-arrow-up {
+        font-size: 30px;
+    }
+
+    #scroll-button {
+        bottom: 20px;
+        right: 0px;
+    }
+}
+
+@media (max-width: 360px) and (max-height: 640px) {}
+
+@media (max-width: 320px) and (max-height: 568px) {}

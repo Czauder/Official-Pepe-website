@@ -14,7 +14,8 @@ sans-serif; */
 }
 
 html {
-  background-image: linear-gradient(200deg, #000000 18%, rgb(29, 28, 116) 40%, #000000 70%);
+  /* background-image: linear-gradient(200deg, #000000 18%, rgb(29, 28, 116) 40%, #000000 70%); */
+  background-color: black;
 }
 
 
@@ -334,7 +335,6 @@ button:focus {
   /* background-color: white; */
   display: flex;
   justify-content: space-around;
-  /* background-image: linear-gradient(260deg, black 20%, #186ea7 40%, black 100%); */
   background: linear-gradient(20deg, #000000 20%, #1d1c74 38%, #000000 80%);
   /* border: 2px solid red; */
 
@@ -377,7 +377,8 @@ span.personal {
   justify-content: center;
   text-align: center;
   transition: 1s linear;
-  background: linear-gradient(160deg, #000000 20%, #1d1c74 30%, #000000 80%);
+  background-color: #000
+    /* background: linear-gradient(160deg, #000000 20%, #1d1c74 30%, #000000 80%); */
 }
 
 .s2 {
@@ -503,9 +504,17 @@ div.award {
   font-size: 28px
 }
 
+div.award:hover .fa-trophy {
+  color: gold;
+}
+
 .fa-medal {
   color: rgb(148, 144, 144);
   font-size: 28px
+}
+
+div.award:hover .fa-medal {
+  color: rgb(216, 214, 214);
 }
 
 /* contact Menager */
